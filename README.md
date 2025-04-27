@@ -10,8 +10,22 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 5.	Stop the program.
 
 ## PROGRAM
+```python
+#include <stdio.h>
+int main() {
+    int a = 44, b = 3;
+    int result;
+    result = a << b;
+    printf("Result after left shifting 44 by 3 positions: %d\n", result);
+    return 0;
+}
+```
 
 ## OUTPUT
+```
+Result after left shifting 44 by 3 positions: 352
+```
+
 
 
 
@@ -47,9 +61,30 @@ Write a C Program to check whether the two numbers are equal or not using simple
 5.	Stop the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+int main() {
+     int num1, num2;
+     printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+    if (num1 == num2) {
+        printf("Both numbers are equal.\n");
+    } else {
+        print("Both numbers are not equal.\n");
+    }
+  return 0;
+}
+```
+
 
 
 ## OUTPUT
+```
+Enter two numbers: 5 5
+Both numbers are equal.
+Enter two numbers: 10 20
+Both numbers are not equal.
+```
            
 ## RESULT
 
@@ -70,8 +105,30 @@ Write a C Program to convert the given string into lowercase.
 5.	Stop the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+#include <ctype.h>
+int main() {
+    char str[100];
+    int i;
+    printf("Enter a string: ");
+    gets(str);
+    for (i = 0; str[i] != '\0'; i++) {
+        str[i] = tolower(str[i]);
+    }
+   printf("String in lowercase: %s\n", str);
+   return 0;
+}
+```
+
 
 ## OUTPUT
+```
+Enter a string: Hello World
+String in lowercase: hello world
+Enter a string: C PROGRAMMING
+String in lowercase: c programming
+```
 
 
 
@@ -95,8 +152,32 @@ Write a C Program to count the total number of words in a given string using do 
 6.	Stop the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+int main() {
+    char str[100];
+    int i = 0, count = 1;
+    printf("Enter a string: ");
+    gets(str);
+    do {
+       if (str[i] == ' ' && str[i+1] != ' ' && str[i+1] != '\0') {
+           count++;
+       }
+       i++;
+  } while (str[i] != '\0');
+   printf("Total number of words: %d\n", count);
+  return 0;
+}
+```
+
 
 ## OUTPUT
+```
+Enter a string: Hello World
+Total number of words: 2
+Enter a string: Welcome to C Programming
+Total number of words: 4
+```
 
 
 
@@ -129,9 +210,39 @@ Step 7: After the loop, check the value of flag:
 Step 8: End the program.
 
 ## PROGRAM
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char c1[100], c2[100];
+
+    printf("Enter the first string: ");
+    scanf(" %[^\n]", c1);
+    getchar(); // consume leftover newline
+
+    printf("Enter the second string: ");
+    scanf(" %[^\n]", c2);
+
+    if (strcmp(c1, c2) == 0) {
+        printf("Strings are same.\n");
+    } else {
+        printf("Strings are not same.\n");
+    }
+
+    return 0;
+}
+```
 
 
 ## OUTPUT
+```Enter the first string: Hello
+Enter the second string: Hello
+Strings are same.
+Enter the first string: Hello World
+Enter the second string: Hello
+Strings are not same.
+```
  
 
 ## RESULT
