@@ -10,21 +10,19 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 5.	Stop the program.
 
 ## PROGRAM
-```python
-#include <stdio.h>
-int main() {
-    int a = 44, b = 3;
-    int result;
-    result = a << b;
-    printf("Result after left shifting 44 by 3 positions: %d\n", result);
-    return 0;
+```c
+#include<stdio.h>
+int main(){
+    int a=44;
+    a=a<<3;
+    printf("After Left Shift Operation value of a is:%d",a);
 }
-```
 
+```
 ## OUTPUT
-```
-Result after left shifting 44 by 3 positions: 352
-```
+
+![image](https://github.com/user-attachments/assets/0cb52731-c273-48ae-bf71-da2fb002cbb2)
+
 
 
 
@@ -62,29 +60,28 @@ Write a C Program to check whether the two numbers are equal or not using simple
 
 ## PROGRAM
 ```c
-#include <stdio.h>
-int main() {
-     int num1, num2;
-     printf("Enter two numbers: ");
-    scanf("%d %d", &num1, &num2);
-    if (num1 == num2) {
-        printf("Both numbers are equal.\n");
-    } else {
-        print("Both numbers are not equal.\n");
-    }
-  return 0;
+#include<stdio.h>
+int main()
+{
+     int a,b;
+     scanf("%d%d",&a,&b);
+     if(a==b)
+     {
+         printf("X is equal to Y");
+     }
+     else
+     {
+         printf("X is NOT equal to Y");
+     }
+     return 0;
 }
 ```
 
 
 
 ## OUTPUT
-```
-Enter two numbers: 5 5
-Both numbers are equal.
-Enter two numbers: 10 20
-Both numbers are not equal.
-```
+![image](https://github.com/user-attachments/assets/f3a1ee06-6693-46ae-bb50-900709e5a932)
+
            
 ## RESULT
 
@@ -106,29 +103,26 @@ Write a C Program to convert the given string into lowercase.
 
 ## PROGRAM
 ```c
-#include <stdio.h>
-#include <ctype.h>
-int main() {
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
     char str[100];
-    int i;
-    printf("Enter a string: ");
-    gets(str);
-    for (i = 0; str[i] != '\0'; i++) {
+    scanf("%s",str);
+    for(int i=0;str[i] != '\0';i++)
+    {
         str[i] = tolower(str[i]);
     }
-   printf("String in lowercase: %s\n", str);
-   return 0;
+    printf("Lower case String is:%s",str);
+    return 0;
 }
+
 ```
 
 
 ## OUTPUT
-```
-Enter a string: Hello World
-String in lowercase: hello world
-Enter a string: C PROGRAMMING
-String in lowercase: c programming
-```
+![image](https://github.com/user-attachments/assets/c57639a5-47ae-4b32-a3d6-d4c55c7003d9)
+
 
 
 
@@ -153,31 +147,25 @@ Write a C Program to count the total number of words in a given string using do 
 
 ## PROGRAM
 ```c
-#include <stdio.h>
-int main() {
-    char str[100];
-    int i = 0, count = 1;
-    printf("Enter a string: ");
-    gets(str);
-    do {
-       if (str[i] == ' ' && str[i+1] != ' ' && str[i+1] != '\0') {
-           count++;
-       }
-       i++;
-  } while (str[i] != '\0');
-   printf("Total number of words: %d\n", count);
-  return 0;
+#include<stdio.h>
+int main()
+{
+    char a[100];
+    int l=0;
+    fgets(a,sizeof(a),stdin);
+    while(a[l]!='\0')
+    {
+       l++;
+    }
+    printf("%d",l-1);
+    return 0;
 }
 ```
 
 
 ## OUTPUT
-```
-Enter a string: Hello World
-Total number of words: 2
-Enter a string: Welcome to C Programming
-Total number of words: 4
-```
+![image](https://github.com/user-attachments/assets/9c00849b-8ee6-4731-871a-1f0a66f8fd05)
+
 
 
 
@@ -211,38 +199,31 @@ Step 8: End the program.
 
 ## PROGRAM
 ```c
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-    char c1[100], c2[100];
-
-    printf("Enter the first string: ");
-    scanf(" %[^\n]", c1);
-    getchar(); // consume leftover newline
-
-    printf("Enter the second string: ");
-    scanf(" %[^\n]", c2);
-
-    if (strcmp(c1, c2) == 0) {
-        printf("Strings are same.\n");
-    } else {
-        printf("Strings are not same.\n");
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[10];
+    char srt[10];
+    scanf("%s",str);
+    scanf("%s",srt);
+    int s = strcmp(str,srt);
+    if(s==0)
+    {
+       printf("strings are same");
     }
-
-    return 0;
+    else
+   {
+      printf("strings are not same");
+   }
+   return 0;
 }
 ```
 
 
 ## OUTPUT
-```Enter the first string: Hello
-Enter the second string: Hello
-Strings are same.
-Enter the first string: Hello World
-Enter the second string: Hello
-Strings are not same.
-```
+![image](https://github.com/user-attachments/assets/b0b9ad69-2a7e-4245-8122-e27638c5b725)
+
  
 
 ## RESULT
